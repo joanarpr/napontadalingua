@@ -81,7 +81,9 @@
         <header class="booking-teacher-head">
           <p class="section-eyebrow">Teacher &amp; Co-Founder</p>
           <h3>Joana Rodrigues</h3>
-          <p>Structured lessons focused on real-life communication, culture and everyday Portuguese.</p>
+          <p>
+            Structured lessons focused on real-life communication, culture and everyday Portuguese.
+          </p>
         </header>
         <div class="booking-tabs" role="tablist" aria-label="Joana’s lesson types">
           <button
@@ -93,7 +95,7 @@
             aria-selected="true"
             data-booking-url="https://www.cal.eu/joana-rodrigues/diagnosis"
           >
-            Coffee break · 15 min
+            Let's Talk · 15 min
           </button>
           <button
             type="button"
@@ -140,7 +142,7 @@
             aria-selected="true"
             data-booking-url="https://cal.com/nsm-meets/coffee-chat"
           >
-            Coffee break · 15 min
+            Let's Talk · 15 min
           </button>
           <button
             type="button"
@@ -175,7 +177,9 @@
         <p>JavaScript is off, so you can book directly:</p>
         <ul>
           <li>
-            <a href="https://www.cal.eu/joana-rodrigues/diagnosis">Joana · free 15-minute coffee break</a>
+            <a href="https://www.cal.eu/joana-rodrigues/diagnosis"
+              >Joana · free 15-minute coffee break</a
+            >
           </li>
           <li>
             <a href="https://www.cal.eu/joana-rodrigues/50min">Joana · 50-minute lesson</a>
@@ -197,8 +201,8 @@
         <div class="band-rule" aria-hidden="true"></div>
         <p class="band-text">
           Tell us whether you're moving to Portugal, already living here, preparing for an exam or
-          simply fascinated by the language. We'll match you with a native teacher and shape the
-          first lesson around the situations you'll actually encounter.
+          simply fascinated by the language. We'll match your needs and shape the first talk around
+          the situations you'll actually encounter.
         </p>
       </div>
     </section>
@@ -207,8 +211,8 @@
       <p class="section-eyebrow">Prefer email?</p>
       <h2>Write to us instead</h2>
       <p>
-        Share your level, goals and preferred times and we’ll get back to you —
-        first lesson, no commitment.
+        Share your level, goals and preferred times and we’ll get back to you — first lesson, no
+        commitment.
       </p>
       <a
         class="btn btn-primary btn-xl"
@@ -272,7 +276,8 @@
             });
             tab.addEventListener("keydown", function (event) {
               var next = index;
-              if (event.key === "ArrowRight" || event.key === "ArrowDown") next = (index + 1) % tabs.length;
+              if (event.key === "ArrowRight" || event.key === "ArrowDown")
+                next = (index + 1) % tabs.length;
               else if (event.key === "ArrowLeft" || event.key === "ArrowUp")
                 next = (index - 1 + tabs.length) % tabs.length;
               else return;
