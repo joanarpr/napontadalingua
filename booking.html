@@ -53,6 +53,9 @@
               <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="blog.html">Blog</a>
             </li>
             <li class="nav-item active">
@@ -66,23 +69,131 @@
       <img src="assets/img/tile.jpg" alt="" />
     </div>
 
-    <section class="page-cta">
-      <p class="section-eyebrow">Ready?</p>
-      <h2>Start speaking Portuguese today</h2>
+    <section class="booking-intro">
+      <p class="section-eyebrow">Book a Lesson</p>
+      <h2>Choose a teacher and a time</h2>
       <p>
-        Book your first lesson and discover how enjoyable learning European Portuguese can be. Write
-        to us with your level, goals and preferred times — first lesson, no commitment.
+        Start with a free 15-minute coffee break, or book a 50-minute lesson. Pick a slot below —
+        you’ll get a confirmation by email.
       </p>
-      <a class="btn btn-primary btn-xl" href="mailto:aulas.napontadalingua@gmail.com"
-        >Book Your First Lesson</a
-      >
-      <p class="hero-note">aulas.napontadalingua@gmail.com</p>
+      <p id="booking-service-note" class="booking-service-note" hidden></p>
     </section>
 
+    <section class="booking-teachers">
+      <article class="booking-teacher" data-teacher="joana" data-origin="https://app.cal.eu">
+        <header class="booking-teacher-head">
+          <p class="section-eyebrow">Teacher &amp; Co-Founder</p>
+          <h3>Joana Rodrigues</h3>
+          <p>Structured lessons focused on real-life communication, culture and everyday Portuguese.</p>
+        </header>
+        <div class="booking-tabs" role="tablist" aria-label="Joana’s lesson types">
+          <button
+            type="button"
+            class="booking-tab"
+            role="tab"
+            id="tab-joana-0"
+            aria-controls="cal-joana-0"
+            aria-selected="true"
+            data-cal-link="joana-rodrigues/diagnosis"
+          >
+            Coffee break · 15 min
+          </button>
+          <button
+            type="button"
+            class="booking-tab"
+            role="tab"
+            id="tab-joana-1"
+            aria-controls="cal-joana-1"
+            aria-selected="false"
+            data-cal-link="joana-rodrigues/50min"
+          >
+            Lesson · 50 min
+          </button>
+        </div>
+        <div
+          class="booking-cal"
+          role="tabpanel"
+          id="cal-joana-0"
+          aria-labelledby="tab-joana-0"
+        ></div>
+        <div
+          class="booking-cal"
+          role="tabpanel"
+          id="cal-joana-1"
+          aria-labelledby="tab-joana-1"
+          hidden
+        ></div>
+      </article>
+
+      <article class="booking-teacher" data-teacher="nikki" data-origin="https://app.cal.com">
+        <header class="booking-teacher-head">
+          <p class="section-eyebrow">Teacher &amp; Co-Founder</p>
+          <h3>Nadine Mussá</h3>
+          <p>
+            Student-led, personalised lessons with Nikki — focused on the skills you actually need.
+          </p>
+        </header>
+        <div class="booking-tabs" role="tablist" aria-label="Nikki’s lesson types">
+          <button
+            type="button"
+            class="booking-tab"
+            role="tab"
+            id="tab-nikki-0"
+            aria-controls="cal-nikki-0"
+            aria-selected="true"
+            data-cal-link="nsm-meets/coffee-chat"
+          >
+            Coffee break · 15 min
+          </button>
+          <button
+            type="button"
+            class="booking-tab"
+            role="tab"
+            id="tab-nikki-1"
+            aria-controls="cal-nikki-1"
+            aria-selected="false"
+            data-cal-link="nsm-meets/50minlesson"
+          >
+            Lesson · 50 min
+          </button>
+        </div>
+        <div
+          class="booking-cal"
+          role="tabpanel"
+          id="cal-nikki-0"
+          aria-labelledby="tab-nikki-0"
+        ></div>
+        <div
+          class="booking-cal"
+          role="tabpanel"
+          id="cal-nikki-1"
+          aria-labelledby="tab-nikki-1"
+          hidden
+        ></div>
+      </article>
+    </section>
+
+    <noscript>
+      <section class="booking-fallback">
+        <p>JavaScript is off, so you can book directly:</p>
+        <ul>
+          <li>
+            <a href="https://www.cal.eu/joana-rodrigues/diagnosis">Joana · free 15-minute coffee break</a>
+          </li>
+          <li>
+            <a href="https://www.cal.eu/joana-rodrigues/50min">Joana · 50-minute lesson</a>
+          </li>
+          <li>
+            <a href="https://cal.com/nsm-meets/coffee-chat">Nikki · free 15-minute coffee break</a>
+          </li>
+          <li>
+            <a href="https://cal.com/nsm-meets/50minlesson">Nikki · 50-minute lesson</a>
+          </li>
+        </ul>
+      </section>
+    </noscript>
+
     <section class="content-band">
-      <div class="tile-band" aria-hidden="true">
-        <img src="assets/img/tile.jpg" alt="" />
-      </div>
       <div class="band-inner">
         <p class="section-eyebrow">What to expect</p>
         <h2 class="band-title">Personalised learning, real progress</h2>
@@ -93,9 +204,22 @@
           first lesson around the situations you'll actually encounter.
         </p>
       </div>
-      <div class="tile-band" aria-hidden="true">
-        <img src="assets/img/tile.jpg" alt="" />
-      </div>
+    </section>
+
+    <section class="page-cta">
+      <p class="section-eyebrow">Prefer email?</p>
+      <h2>Write to us instead</h2>
+      <p>
+        Share your level, goals and preferred times and we’ll get back to you —
+        first lesson, no commitment.
+      </p>
+      <a
+        class="btn btn-primary btn-xl"
+        id="booking-mailto"
+        href="mailto:aulas.napontadalingua@gmail.com"
+        >Email Us</a
+      >
+      <p class="hero-note">aulas.napontadalingua@gmail.com</p>
     </section>
 
     <footer class="site-footer">
@@ -111,5 +235,132 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script>
+      (function (C, A, L) {
+        var p = function (a, ar) {
+          a.q.push(ar);
+        };
+        var d = C.document;
+        C.Cal =
+          C.Cal ||
+          function () {
+            var cal = C.Cal;
+            var ar = arguments;
+            if (!cal.loaded) {
+              cal.ns = {};
+              cal.q = cal.q || [];
+              d.head.appendChild(d.createElement("script")).src = A;
+              cal.loaded = true;
+            }
+            if (ar[0] === L) {
+              var api = function () {
+                p(api, arguments);
+              };
+              var namespace = ar[1];
+              api.q = api.q || [];
+              if (typeof namespace === "string") {
+                cal.ns[namespace] = cal.ns[namespace] || api;
+                p(cal.ns[namespace], ar);
+                p(cal, ["initNamespace", namespace]);
+              } else p(cal, ar);
+              return;
+            }
+            p(cal, ar);
+          };
+      })(window, "https://app.cal.com/embed/embed.js", "init");
+
+      (function () {
+        var ui = {
+          theme: "light",
+          hideEventTypeDetails: false,
+          cssVarsPerTheme: {
+            light: {
+              "cal-brand": "#9c4dcc",
+              "cal-brand-emphasis": "#7a3aa3",
+            },
+          },
+        };
+
+        function mountCal(namespace, origin, selector, calLink) {
+          Cal("init", namespace, { origin: origin });
+          Cal.ns[namespace]("inline", {
+            elementOrSelector: selector,
+            calLink: calLink,
+            config: {
+              layout: "month_view",
+              useSlotsViewOnSmallScreen: "true",
+            },
+          });
+          Cal.ns[namespace]("ui", ui);
+        }
+
+        document.querySelectorAll(".booking-teacher").forEach(function (block) {
+          var teacher = block.getAttribute("data-teacher");
+          var origin = block.getAttribute("data-origin");
+          var tabs = Array.prototype.slice.call(block.querySelectorAll(".booking-tab"));
+          var panels = Array.prototype.slice.call(block.querySelectorAll(".booking-cal"));
+
+          function showPanel(index) {
+            tabs.forEach(function (tab, i) {
+              var selected = i === index;
+              tab.setAttribute("aria-selected", selected ? "true" : "false");
+              tab.tabIndex = selected ? 0 : -1;
+            });
+            panels.forEach(function (panel, i) {
+              panel.hidden = i !== index;
+            });
+
+            var panel = panels[index];
+            var tab = tabs[index];
+            if (!panel || !tab || panel.getAttribute("data-mounted") === "true") return;
+            mountCal(teacher + "-" + index, origin, "#" + panel.id, tab.getAttribute("data-cal-link"));
+            panel.setAttribute("data-mounted", "true");
+          }
+
+          tabs.forEach(function (tab, index) {
+            tab.addEventListener("click", function () {
+              showPanel(index);
+            });
+            tab.addEventListener("keydown", function (event) {
+              var next = index;
+              if (event.key === "ArrowRight" || event.key === "ArrowDown") next = (index + 1) % tabs.length;
+              else if (event.key === "ArrowLeft" || event.key === "ArrowUp")
+                next = (index - 1 + tabs.length) % tabs.length;
+              else return;
+              event.preventDefault();
+              tabs[next].focus();
+              showPanel(next);
+            });
+          });
+
+          showPanel(0);
+        });
+      })();
+
+      (function () {
+        var labels = {
+          "portuguese-lessons": "Portuguese Lessons",
+          "seasonal-courses": "Seasonal Courses",
+          "personal-support": "Personal Support in Portugal",
+          translation: "Translation Services",
+          "english-tutoring": "English Tutoring",
+          "study-support": "Study Support and Techniques",
+        };
+        var key = new URLSearchParams(window.location.search).get("service");
+        var label = key && labels[key];
+        if (!label) return;
+        var note = document.getElementById("booking-service-note");
+        var mailto = document.getElementById("booking-mailto");
+        if (note) {
+          note.hidden = false;
+          note.textContent = "You're enquiring about " + label + ".";
+        }
+        if (mailto) {
+          mailto.href =
+            "mailto:aulas.napontadalingua@gmail.com?subject=" +
+            encodeURIComponent("Enquiry: " + label);
+        }
+      })();
+    </script>
   </body>
 </html>

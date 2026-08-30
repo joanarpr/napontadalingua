@@ -1,0 +1,31 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "title": "Azulejo Editorial", "x": 0, "y": 0, "w": 1440, "h": 3500 },
+    { "file": "QuietLuxury.dc.html", "title": "Quiet Luxury", "x": 1600, "y": 0, "w": 1440, "h": 3500 },
+    { "file": "SoftBoutique.dc.html", "title": "Soft Boutique", "x": 3200, "y": 0, "w": 1440, "h": 3500 }
+  ],
+  "annotations": [
+    {
+      "id": "note-azulejo-editorial",
+      "x": 0,
+      "y": -250,
+      "w": 460,
+      "text": "AZULEJO EDITORIAL\n\nTreats the tile as ornament, not wallpaper: deep aubergine masthead, then the azulejo appears only as narrow inlay bands marking each section break. Asymmetric hero with the photo bleeding off the right edge. Squared 2px buttons, hairline-ruled testimonials, full-bleed article split.\n\nWhy: most distinctive, and the Portuguese identity is structural rather than decorative.\nTradeoff: the art direction needs discipline to maintain — every new section has to earn its band."
+    },
+    {
+      "id": "note-quiet-luxury",
+      "x": 1600,
+      "y": -250,
+      "w": 460,
+      "text": "QUIET LUXURY\n\nCream page, aubergine ink, purple reserved for small accents. Cormorant Garamond display over Raleway small caps. Azulejo stays present but whispered: a framed inlay band under the wordmark, a tile strip running alongside each photo, and a very faint watermark behind the philosophy and CTA panels.\n\nWhy: reads most expensive and most grown-up; closest to a boutique print identity.\nTradeoff: the least colourful of the three — loses some of the current warmth and energy."
+    },
+    {
+      "id": "note-soft-boutique",
+      "x": 3200,
+      "y": -250,
+      "w": 460,
+      "text": "SOFT BOUTIQUE\n\nThe most polished version of what the site already is: soft lavender field, white rounded cards with long soft shadows, floating pill nav, pill CTAs. Azulejo carried as a tinted wash behind the masthead, CTA and footer, plus a tile cap on each testimonial card.\n\nWhy: safest to adopt — closest to today's structure, biggest polish gain per unit of change.\nTradeoff: least distinctive; the card-and-shadow language is common on modern service sites."
+    }
+  ],
+  "launch": { "view": "canvas" }
+}

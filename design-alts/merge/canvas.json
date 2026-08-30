@@ -1,0 +1,39 @@
+{
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 3500,
+      "title": "Azulejo Editorial"
+    },
+    {
+      "file": "SoftBoutique.dc.html",
+      "x": 1647,
+      "y": 34,
+      "w": 1440,
+      "h": 3500,
+      "title": "Soft Boutique"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "note-azulejo-editorial",
+      "x": 475,
+      "y": -361,
+      "w": 460,
+      "text": "AZULEJO EDITORIAL\n\nTreats the tile as ornament, not wallpaper: deep aubergine masthead, then the azulejo appears only as narrow inlay bands marking each section break. Asymmetric hero with the photo bleeding off the right edge. Squared 2px buttons, hairline-ruled testimonials, full-bleed article split.\n\nWhy: most distinctive, and the Portuguese identity is structural rather than decorative.\nTradeoff: the art direction needs discipline to maintain — every new section has to earn its band."
+    },
+    {
+      "id": "note-soft-boutique",
+      "x": 3512,
+      "y": -270,
+      "w": 460,
+      "text": "SOFT BOUTIQUE\n\nThe most polished version of what the site already is: soft lavender field, white rounded cards with long soft shadows, floating pill nav, pill CTAs. Azulejo carried as a tinted wash behind the masthead, CTA and footer, plus a tile cap on each testimonial card.\n\nWhy: safest to adopt — closest to today's structure, biggest polish gain per unit of change.\nTradeoff: least distinctive; the card-and-shadow language is common on modern service sites."
+    }
+  ],
+  "launch": {
+    "view": "canvas"
+  }
+}

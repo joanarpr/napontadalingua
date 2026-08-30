@@ -4,8 +4,12 @@
   --ink: #2e0a3d;
   --ink-soft: #4a3355;
   --ink-muted: #6b5277;
-  --accent: #9c4dcc;
-  --accent-hover: #7a3aa3;
+  --accent: #2e0a3d;
+  --accent-hover: #1a0524;
+  --bs-primary: #2e0a3d;
+  --bs-primary-rgb: 46, 10, 61;
+  --bs-link-color: #2e0a3d;
+  --bs-link-hover-color: #1a0524;
   --page: #faf8fb;
   --band: #f2e9f8;
   --line: #e3d5ec;
@@ -59,7 +63,13 @@ p {
 .btn,
 .btn-primary,
 .btn-primary.btn-xl {
-  background: var(--accent);
+  --bs-btn-bg: var(--ink);
+  --bs-btn-border-color: var(--ink);
+  --bs-btn-hover-bg: var(--accent-hover);
+  --bs-btn-hover-border-color: var(--accent-hover);
+  --bs-btn-active-bg: var(--accent-hover);
+  --bs-btn-active-border-color: var(--accent-hover);
+  background: var(--ink);
   border: 0;
   border-radius: 2px;
   box-shadow: none;
@@ -116,8 +126,7 @@ header.masthead::before {
 }
 
 .masthead-tile,
-.footer-tile,
-.tile-band img {
+.footer-tile {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -258,7 +267,7 @@ header.masthead::before {
 #mainNav .navbar-nav .nav-item.active .nav-link,
 #mainNav .navbar-nav .nav-item .nav-link[aria-current="page"] {
   color: #fff;
-  border-bottom-color: var(--accent);
+  border-bottom-color: #fff;
 }
 
 #mainNav.scrolled {
@@ -295,15 +304,6 @@ header.masthead::before {
   #mainNav .navbar-nav .nav-item .nav-link {
     padding: 14px 2px;
   }
-}
-
-/* Azulejo band */
-
-.tile-band {
-  height: 18px;
-  position: relative;
-  overflow: hidden;
-  background: var(--ink);
 }
 
 /* Hero */
@@ -758,60 +758,49 @@ header.masthead::before {
   transform: none;
 }
 
-.page-intro {
-  display: flex;
-  align-items: center;
-  padding: 96px 0 96px var(--gutter);
+.about-hero {
+  padding: 80px var(--gutter) 48px;
 }
 
-.page-intro-copy {
-  width: min(640px, 100%);
-  flex: none;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+.about-hero-img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.page-intro-copy h2,
+.about-hero-panel {
+  position: relative;
+  z-index: 1;
+  max-width: 920px;
+  margin: 2.5rem auto 0;
+  background: var(--page);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 3rem 3.5rem;
+}
+
+.about-hero-panel p,
+.teacher-card-body p,
+.cta-panel p,
+.services-head p,
+.prose p {
+  font-size: 17px;
+  line-height: 1.85;
+  color: var(--ink-soft);
+}
+
+.about-hero-panel p:last-child,
+.teacher-card-body p:last-child,
+.cta-panel p:last-child {
+  margin-bottom: 0;
+}
+
 .section-heading .section-heading-lower,
 .teacher-card h3,
 .service-card h3 {
   font-family: "Raleway", sans-serif;
   font-weight: 200;
   text-transform: none;
-}
-
-.page-intro-copy h2 {
-  font-size: clamp(2rem, 3.6vw, 48px);
-  line-height: 1.15;
-  color: var(--ink);
-  margin: 0;
-}
-
-.page-intro-copy p,
-.prose p {
-  font-size: 17px;
-  line-height: 1.85;
-  color: var(--ink-soft);
-  margin: 0;
-}
-
-.page-intro-media {
-  flex-grow: 1;
-  align-self: stretch;
-  min-height: 480px;
-  margin-left: 70px;
-  position: relative;
-  overflow: hidden;
-}
-
-.page-intro-media img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
 }
 
 .section-heading {
@@ -851,60 +840,135 @@ header.masthead::before {
 .teacher-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0;
-  border-left: 1px solid var(--line);
+  gap: 2.5rem;
 }
 
 .teacher-card {
-  border-right: 1px solid var(--line);
-  padding: 0 40px;
   background: transparent;
+  padding: 0;
 }
 
 .teacher-card img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
-  margin-bottom: 28px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
-.teacher-card .bg-faded,
-.service-card,
-.about-heading-content .bg-faded {
-  background: transparent;
-  border-radius: 0;
-  padding: 0;
+.teacher-card-body {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 2rem;
 }
 
-.teacher-card p,
+.teacher-card-body .section-heading {
+  margin-bottom: 1.25rem;
+}
+
+.teacher-card-body p,
 .service-card p {
   font-size: 16px;
   line-height: 1.85;
   color: var(--ink-soft);
 }
 
+.cta-band {
+  background: var(--band);
+  padding: 80px var(--gutter);
+}
+
+.cta-panel {
+  max-width: 860px;
+  margin: 0 auto;
+  background: var(--page);
+  border-radius: 8px;
+  padding: 3.5rem 3rem;
+  text-align: center;
+}
+
+.cta-panel .section-heading {
+  margin-bottom: 1.5rem;
+}
+
+.cta-panel .btn {
+  margin-top: 1.5rem;
+}
+
 .services {
   padding: 88px var(--gutter);
+}
+
+.services-head p {
+  max-width: 40rem;
+  margin: 1.25rem auto 0;
 }
 
 .services-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
+  gap: 1.5rem;
+  align-items: stretch;
 }
 
 .service-card {
-  background: var(--page);
-  padding: 36px 32px;
-  height: auto;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 2rem 1.75rem;
+  height: 100%;
+}
+
+a.service-card {
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+a.service-card:hover,
+a.service-card:focus-visible {
+  color: inherit;
+  border-color: var(--lilac-mid);
+  box-shadow: 0 10px 28px rgba(46, 10, 61, 0.08);
+  transform: translateY(-2px);
+}
+
+a.service-card:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
 }
 
 .service-card h3 {
   font-size: 22px;
   color: var(--ink);
   margin-bottom: 12px;
+}
+
+.service-card-detail {
+  display: flex;
+  flex-direction: column;
+  scroll-margin-top: 6rem;
+}
+
+.service-card-detail:target {
+  border-color: var(--lilac-mid);
+  box-shadow: 0 10px 28px rgba(46, 10, 61, 0.08);
+}
+
+.service-card-detail p + p {
+  margin-top: 0.75rem;
+}
+
+.service-card-detail .btn {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 14px 26px;
+}
+
+.service-card-detail p:last-of-type {
+  margin-bottom: 1.5rem;
 }
 
 .services-actions {
@@ -970,36 +1034,163 @@ header.masthead::before {
   color: var(--accent);
 }
 
+/* Booking */
+
+.booking-intro {
+  padding: 96px var(--gutter-wide) 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.booking-intro h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: clamp(1.9rem, 3.4vw, 46px);
+  font-weight: 200;
+  line-height: 1.16;
+  color: var(--ink);
+  margin: 0;
+}
+
+.booking-intro p {
+  font-size: 17px;
+  line-height: 1.85;
+  color: var(--ink-soft);
+  margin: 0;
+  max-width: 36rem;
+}
+
+.booking-service-note {
+  font-family: "Raleway", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.booking-teachers {
+  padding: 40px var(--gutter) 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.booking-teacher {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 2.5rem 2rem 1.5rem;
+}
+
+.booking-teacher-head {
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.booking-teacher-head h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: clamp(1.8rem, 3vw, 36px);
+  font-weight: 200;
+  color: var(--ink);
+  margin: 0.35rem 0 0.85rem;
+}
+
+.booking-teacher-head p:last-child {
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--ink-soft);
+  margin: 0 auto;
+  max-width: 36rem;
+}
+
+.booking-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.booking-tab {
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  color: var(--ink);
+  font-family: "Raleway", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 16px 26px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.booking-tab:hover,
+.booking-tab:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.booking-tab:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.booking-tab[aria-selected="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.booking-tab[aria-selected="true"]:hover,
+.booking-tab[aria-selected="true"]:focus-visible {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: #fff;
+}
+
+.booking-cal {
+  width: 100%;
+  min-height: 720px;
+  overflow: auto;
+}
+
+.booking-cal[hidden] {
+  display: none;
+}
+
+.booking-fallback {
+  padding: 24px var(--gutter-wide) 64px;
+  text-align: center;
+}
+
 @media (max-width: 991.98px) {
-  .page-intro,
+  .about-hero,
   .page-section,
   .teachers,
   .services,
-  .blog-list {
+  .blog-list,
+  .cta-band {
     padding: 64px 1.5rem;
   }
 
-  .page-intro {
-    flex-direction: column;
-    gap: 36px;
+  .about-hero-panel,
+  .cta-panel,
+  .teacher-card-body {
+    padding: 2rem 1.5rem;
   }
 
-  .page-intro-media {
-    margin-left: 0;
-    min-height: 280px;
-    width: 100%;
+  .about-hero-panel {
+    margin-top: 1.5rem;
   }
 
   .teacher-grid,
   .services-grid {
     grid-template-columns: 1fr;
-  }
-
-  .teacher-card {
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
-    padding: 0 0 40px;
-    margin-bottom: 40px;
   }
 
   .blog-card {
@@ -1013,6 +1204,35 @@ header.masthead::before {
 
   .blog-card-copy {
     padding: 32px 24px;
+  }
+
+  .booking-intro,
+  .booking-teachers {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .booking-teacher {
+    padding: 2rem 1.25rem 1.25rem;
+  }
+
+  .booking-cal {
+    min-height: 560px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .booking-intro {
+    padding: 64px 1.25rem 16px;
+  }
+
+  .booking-teachers {
+    padding: 24px 1.25rem 64px;
+    gap: 48px;
+  }
+
+  .booking-tab {
+    width: 100%;
   }
 }
 
