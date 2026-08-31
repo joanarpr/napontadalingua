@@ -550,6 +550,10 @@ header.masthead::before {
   margin: 0;
 }
 
+.testimonial p:not(.stars) {
+  flex: 1;
+}
+
 .testimonial cite {
   font-family: "Raleway", sans-serif;
   font-size: 11px;
@@ -558,6 +562,82 @@ header.masthead::before {
   text-transform: uppercase;
   color: var(--accent);
   font-style: normal;
+  margin-top: auto;
+}
+
+.testimonials #testimonialCarousel {
+  position: relative;
+  padding: 0;
+}
+
+.testimonials .carousel-inner {
+  overflow: hidden;
+}
+
+.testimonials .carousel-item .testimonial-grid {
+  min-height: 100%;
+}
+
+.testimonial-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 48px;
+}
+
+.testimonial-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.testimonial-arrow svg {
+  width: 18px;
+  height: 18px;
+}
+
+.testimonial-arrow:hover,
+.testimonial-arrow:focus-visible {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: #fff;
+  outline: none;
+}
+
+.testimonials .carousel-indicators {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0;
+}
+
+.testimonials .carousel-indicators [data-bs-target] {
+  width: 8px;
+  height: 8px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: var(--lilac-soft);
+  opacity: 1;
+  text-indent: -999px;
+  overflow: hidden;
+}
+
+.testimonials .carousel-indicators .active {
+  background-color: var(--ink);
 }
 
 @media (max-width: 991.98px) {
@@ -575,6 +655,10 @@ header.masthead::before {
     border-right: 0;
     border-bottom: 1px solid var(--line);
     padding: 28px 0;
+  }
+
+  .testimonial-controls {
+    margin-top: 36px;
   }
 }
 
