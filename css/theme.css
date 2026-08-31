@@ -1262,3 +1262,139 @@ a.service-card:focus-visible {
 .about-heading .about-heading-content {
   margin-top: 0;
 }
+/* Blog article modal */
+
+.blog-modal .modal-content {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.blog-modal .modal-header {
+  border-bottom: 1px solid var(--line);
+  padding: 2rem 2.25rem 1.5rem;
+  align-items: flex-start;
+  gap:  1rem;
+}
+
+.blog-modal .modal-header h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  font-weight: 200;
+  line-height: 1.2;
+  color: var(--ink);
+  margin:  0.35rem 0 0;
+}
+
+.blog-modal .modal-body {
+  padding: 2rem 2.25rem;
+  background: var(--page);
+}
+
+.blog-modal .modal-body>p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--ink-soft);
+  margin:  0 0 1.25rem;
+}
+
+.blog-expr-list {
+  list-style: none;
+  counter-reset: expr;
+  margin:  2rem 0;
+  padding: 0;
+}
+
+.blog-expr-list li {
+  counter-increment: expr;
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.15rem 1.5rem 1.15rem 3.5rem;
+  margin-bottom: 0.85rem;
+}
+
+.blog-expr-list li::before {
+  content: counter(expr);
+  position: absolute;
+  left: 1.35rem;
+  top: 1.35rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  background: var(--band);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-expr-list h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 0.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 0.5rem;
+}
+
+.blog-expr-list h3 .blog-expr-en {
+  font-weight: 400;
+  color: var(--ink-muted);
+}
+
+.blog-expr-list p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.blog-modal-cta {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.blog-modal-cta .btn {
+  padding: 16px 32px;
+}
+
+.blog-modal .btn-close {
+  margin: 0.25rem 0 0 auto;
+}
+
+button.text-link {
+  background: transparent;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  cursor: pointer;
+  text-align: left;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (max-width: 575.98px) {
+  .blog-modal .modal-header,
+  .blog-modal .modal-body {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .blog-expr-list li {
+    padding-left: 3rem;
+  }
+
+  .blog-expr-list li::before {
+    left: 1rem;
+  }
+}
