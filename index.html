@@ -174,32 +174,128 @@
 
     <section class="testimonials">
       <p class="section-eyebrow testimonials-label">In Their Words</p>
-      <div class="testimonial-grid">
-        <blockquote class="testimonial">
-          <p class="stars" aria-label="5 stars">★★★★★</p>
-          <p>
-            "A wonderful teacher with lots of patience. We are not only learning the textbook
-            materials, we also learn the culture of Portugal, Portuguese songs. Great and fun
-            lessons for all level learners."
-          </p>
-          <cite>Crystal · United Kingdom</cite>
-        </blockquote>
-        <blockquote class="testimonial">
-          <p class="stars" aria-label="5 stars">★★★★★</p>
-          <p>
-            "I really liked the class with Joana. She is very structured, quickly identifies the
-            weak points and proposes a system to improve the learning process."
-          </p>
-          <cite>Kenia · Mexico</cite>
-        </blockquote>
-        <blockquote class="testimonial">
-          <p class="stars" aria-label="5 stars">★★★★★</p>
-          <p>
-            "Muito obrigada! A Joana é uma tutora muito preparada e de mente aberta. Obrigada por
-            tudo."
-          </p>
-          <cite>Melanie · France</cite>
-        </blockquote>
+      <div
+        id="testimonialCarousel"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="9000"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="testimonial-grid">
+              <blockquote class="testimonial">
+                <p class="stars" aria-label="5 stars">★★★★★</p>
+                <p>
+                  "A wonderful teacher with lots of patience to help students to understand
+                  Portuguese. We are not only learning the textbook materials, we also learn the
+                  cultures of Portugal, Portuguese songs. Always well prepare to teach a class;
+                  Also put lots of effort to teach. Great and fun lessons for all level learners."
+                </p>
+                <cite>Crystal · United Kingdom</cite>
+              </blockquote>
+              <blockquote class="testimonial">
+                <p class="stars" aria-label="5 stars">★★★★★</p>
+                <p>"Great teacher, structured and fun."</p>
+                <cite>Samer · Canada</cite>
+              </blockquote>
+              <blockquote class="testimonial">
+                <p class="stars" aria-label="5 stars">★★★★★</p>
+                <p>
+                  "Muito obrigada! A Joana é uma tutora muito preparada e de mente aberta. Obrigada
+                  por tudo."
+                </p>
+                <cite>Melanie · France</cite>
+              </blockquote>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimonial-grid">
+              <blockquote class="testimonial">
+                <p class="stars" aria-label="5 stars">★★★★★</p>
+                <p>
+                  "I really liked the class with Joana. She is very structured, quickly identifies
+                  the weak points and proposes a system to improve the learning process."
+                </p>
+                <cite>Kenia · Mexico</cite>
+              </blockquote>
+              <blockquote class="testimonial">
+                <p class="stars" aria-label="5 stars">★★★★★</p>
+                <p>
+                  "I’m really thankful for my Portuguese teacher! She’s awesome at adjusting to what
+                  I need and making the lessons fit my pace and interests. Because of her, I’ve
+                  made great progress in learning Portuguese. Every session is fun and super
+                  helpful. I highly recommend her to anyone wanting to learn Portuguese. She’s more
+                  than just a teacher – she’s a fantastic mentor!"
+                </p>
+                <cite>Ana · Romania</cite>
+              </blockquote>
+              <blockquote class="testimonial">
+                <p class="stars" aria-label="5 stars">★★★★★</p>
+                <p>
+                  "Me gusta aprender junto a la profe ya que sus clases son totalmente dinámicas y
+                  entendibles"
+                </p>
+                <cite>Gabriela · Argentina</cite>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-controls">
+          <button
+            type="button"
+            class="testimonial-arrow"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="prev"
+            aria-label="Previous reviews"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M15 5 8 12l7 7"></path>
+            </svg>
+          </button>
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Reviews 1 to 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide-to="1"
+              aria-label="Reviews 4 to 6"
+            ></button>
+          </div>
+          <button
+            type="button"
+            class="testimonial-arrow"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="next"
+            aria-label="Next reviews"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
 
