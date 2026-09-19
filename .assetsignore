@@ -1,0 +1,14 @@
+# Files Cloudflare must not publish (the whole repo root is the assets directory)
+.git
+.gitignore
+.DS_Store
+.claude
+wrangler.jsonc
+*.md
+design-alts
+Main-html-2
+css/*.html
+assets/img/products-0*.jpg
+assets/img/intro.jpg
+assets/img/tile.jpg
+assets/img/*.png
