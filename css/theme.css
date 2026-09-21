@@ -937,9 +937,10 @@ header.masthead::before {
 }
 
 .teacher-card img {
+  display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  max-width: 100%;
+  height: auto;
   border-radius: 8px;
   margin-bottom: 1rem;
 }
