@@ -258,7 +258,9 @@ header.masthead::before {
   color: rgba(255, 255, 255, 0.62);
   padding: 22px 2px;
   border-bottom: 2px solid transparent;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link:hover,
@@ -600,7 +602,10 @@ header.masthead::before {
   background: transparent;
   color: var(--ink);
   cursor: pointer;
-  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background 0.2s ease;
 }
 
 .testimonial-arrow svg {
@@ -1013,7 +1018,10 @@ a.service-card {
   display: flex;
   flex-direction: column;
   color: inherit;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
 
 a.service-card:hover,
@@ -1363,7 +1371,7 @@ a.service-card:focus-visible {
   border-bottom: 1px solid var(--line);
   padding: 2rem 2.25rem 1.5rem;
   align-items: flex-start;
-  gap:  1rem;
+  gap: 1rem;
 }
 
 .blog-modal .modal-header h2 {
@@ -1372,7 +1380,7 @@ a.service-card:focus-visible {
   font-weight: 200;
   line-height: 1.2;
   color: var(--ink);
-  margin:  0.35rem 0 0;
+  margin: 0.35rem 0 0;
 }
 
 .blog-modal .modal-body {
@@ -1380,17 +1388,17 @@ a.service-card:focus-visible {
   background: var(--page);
 }
 
-.blog-modal .modal-body>p {
+.blog-modal .modal-body > p {
   font-size: 16px;
   line-height: 1.85;
   color: var(--ink-soft);
-  margin:  0 0 1.25rem;
+  margin: 0 0 1.25rem;
 }
 
 .blog-expr-list {
   list-style: none;
   counter-reset: expr;
-  margin:  2rem 0;
+  margin: 2rem 0;
   padding: 0;
 }
 
@@ -1572,4 +1580,135 @@ button.text-link {
   .post {
     padding-top: 48px;
   }
+}
+
+
+/* =========================
+   FAQ
+   ========================= */
+
+.faq-section {
+  padding: 100px 30px;
+  background: #f8f6f2;
+}
+
+.faq-inner {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.faq-intro {
+  max-width: 680px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.faq-intro h2 {
+  margin: 10px 0 18px;
+}
+
+.faq-intro p:last-child {
+  margin: 0;
+  line-height: 1.8;
+}
+
+.faq-accordion {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.faq-accordion .accordion-item {
+  border: 0;
+  border-bottom: 1px solid rgba(50, 40, 60, 0.15);
+  background: transparent;
+  border-radius: 0;
+}
+
+.faq-accordion .accordion-item:first-child {
+  border-top: 1px solid rgba(50, 40, 60, 0.15);
+}
+
+.faq-accordion .accordion-button {
+  padding: 24px 5px;
+  background: transparent;
+  color: #332b38;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: none;
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+  background: transparent;
+  color: #9c4dcc;
+  box-shadow: none;
+}
+
+.faq-accordion .accordion-button:focus {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.faq-accordion .accordion-button::after {
+  background-size: 14px;
+}
+
+.faq-accordion .accordion-body {
+  padding: 0 45px 25px 5px;
+  color: #5b5360;
+  line-height: 1.8;
+}
+
+.faq-accordion .accordion-body p {
+  margin-bottom: 12px;
+}
+
+.faq-accordion .accordion-body p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-accordion .accordion-body ul {
+  margin: 10px 0 15px;
+  padding-left: 22px;
+}
+
+.faq-accordion .accordion-body li {
+  margin-bottom: 8px;
+}
+
+.faq-accordion strong {
+  color: #332b38;
+}
+
+@media (max-width: 767px) {
+  .faq-section {
+    padding: 70px 20px;
+  }
+
+  .faq-intro {
+    margin-bottom: 35px;
+  }
+
+  .faq-accordion .accordion-button {
+    padding: 20px 0;
+    padding-right: 35px;
+  }
+
+  .faq-accordion .accordion-body {
+    padding: 0 10px 22px 0;
+  }
+}
+.blog-dialogue {
+  margin: 35px 0;
+  padding: 25px 30px;
+  background: #f8f6f2;
+  border-left: 3px solid #9c4dcc;
+}
+
+.blog-dialogue p {
+  margin-bottom: 10px;
+}
+
+.blog-dialogue p:last-child {
+  margin-bottom: 0;
 }
