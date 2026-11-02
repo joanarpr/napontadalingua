@@ -1944,3 +1944,22 @@ button.text-link {
     transition-delay: 0ms;
   }
 }
+
+/* Mobile: idioma em cima das letras do cabeçalho ------------------------- */
+@media (max-width: 767.98px) {
+  .masthead {
+    padding-top: 24px;
+  }
+
+  .lang-switch {
+    position: static;
+    top: auto;
+    right: auto;
+    justify-content: center;
+    margin: 0 auto 18px;
+  }
+
+  .masthead-inner {
+    gap: 12px;
+  }
+}
