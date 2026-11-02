@@ -263,7 +263,18 @@
             €20 / 50-minute lesson · €18/lesson with the month paid in advance · 5-lesson pack €80
             (valid for 6 weeks) · 10-lesson pack €150 (valid for 3 months).
           </p>
-          <a href="/booking?service=portuguese-lessons" class="btn btn-primary">Book now</a>
+          <div class="service-card-actions">
+            <a href="/booking?service=portuguese-lessons" class="btn btn-primary">Book now</a>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#price-modal"
+              data-service="portuguese-lessons"
+            >
+              View prices
+            </button>
+          </div>
         </article>
         <article class="service-card service-card-detail" id="translation">
           <h3>Portuguese–English Translation</h3>
@@ -276,8 +287,16 @@
             communicate clearly and appropriately — in Portuguese or English — with the tone and
             context that the situation calls for.
           </p>
-          <p>€0.10 per word, minimum €15.</p>
-          <a href="/booking?service=translation" class="btn btn-primary">Ask about this</a>
+          <p>€0.10 per word, minimum €15. Technical texts quoted separately.</p>
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#price-modal"
+            data-service="translation"
+          >
+            View prices
+          </button>
         </article>
         <article class="service-card service-card-detail" id="seasonal-courses">
           <h3>Seasonal Courses</h3>
@@ -290,7 +309,15 @@
             particular skill, so you can make progress without a long-term commitment. We're
             currently working on a Christmas vocabulary workshop.
           </p>
-          <a href="/booking?service=seasonal-courses" class="btn btn-primary">Ask about this</a>
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#price-modal"
+            data-service="seasonal-courses"
+          >
+            View prices
+          </button>
         </article>
         <article class="service-card service-card-detail" id="personal-support">
           <h3>Personal Support in Portugal</h3>
@@ -307,15 +334,32 @@
             Call preparation €20/hour · accompaniment €25/hour (transport not included) · writing in
             Portuguese €15/hour (minimum 1 hour).
           </p>
-          <a href="/booking?service=personal-support" class="btn btn-primary">Ask about this</a>
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#price-modal"
+            data-service="personal-support"
+          >
+            View prices
+          </button>
         </article>
         <article class="service-card service-card-detail" id="bureaucracy">
           <h3>Bureaucracy &amp; admin</h3>
           <p>Practical support with letters, forms and appointments.</p>
           <p>€20/hour, minimum 1 hour.</p>
-          <a href="https://www.cal.eu/joana-rodrigues/diagnosis" class="btn btn-primary"
-            >Book a free 15-minute chat</a
-          >
+          <div class="service-card-actions">
+            <a href="/booking" class="btn btn-primary">Book a free 15-minute chat</a>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#price-modal"
+              data-service="bureaucracy"
+            >
+              View prices
+            </button>
+          </div>
         </article>
         <article class="service-card service-card-detail" id="finance">
           <h3>Finance &amp; spreadsheets</h3>
@@ -324,17 +368,35 @@
             explained step by step.
           </p>
           <p>€25 per sheet · €95.50 per sheet with three sessions (guidance, setup, adjustment).</p>
-          <a href="https://www.cal.eu/joana-rodrigues/diagnosis" class="btn btn-primary"
-            >Book a free 15-minute chat</a
-          >
+          <div class="service-card-actions">
+            <a href="/booking" class="btn btn-primary">Book a free 15-minute chat</a>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#price-modal"
+              data-service="finance"
+            >
+              View prices
+            </button>
+          </div>
         </article>
         <article class="service-card service-card-detail" id="ciple-prep">
           <h3>CIPLE A2 Preparation</h3>
           <p>Ten lessons, two per week in the five weeks before the exam, with mock exams. €150.</p>
           <p><a href="/ciple-a2">More about the CIPLE A2 preparation</a></p>
-          <a href="https://www.cal.eu/joana-rodrigues/diagnosis" class="btn btn-primary"
-            >Book a free 15-minute chat</a
-          >
+          <div class="service-card-actions">
+            <a href="/booking" class="btn btn-primary">Book a free 15-minute chat</a>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#price-modal"
+              data-service="ciple"
+            >
+              View prices
+            </button>
+          </div>
         </article>
       </div>
       <p class="services-note">
@@ -370,6 +432,41 @@
         <p class="site-footer-copy">© 2026 Na Ponta da Língua. All rights reserved.</p>
       </div>
     </footer>
+    <div
+      class="modal fade"
+      id="price-modal"
+      tabindex="-1"
+      aria-labelledby="price-modal-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="price-modal-title">Prices</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <ul class="price-list"></ul>
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-primary" id="price-modal-book" href="/booking"
+              >Book a free chat</a
+            >
+            <a
+              class="price-modal-email"
+              id="price-modal-email"
+              href="mailto:aulas.napontadalingua@gmail.com"
+              >Ask more about this</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>
