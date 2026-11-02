@@ -67,27 +67,30 @@ window.addEventListener("DOMContentLoaded", () => {
     },
     "seasonal-courses": {
       en: {
-        title: "Seasonal Courses",
+        title: "Christmas courses",
         lines: [
-          "Prices to be announced",
-          "Short, themed courses and workshops designed around specific topics, seasons and learning goals.",
-          "We're currently working on a Christmas vocabulary workshop."
+          "A1: 10 lessons of 90 min — 300 € (starts 16 November 2026)",
+          "A2: 20 lessons of 90 min — 500 € (starts 16 November 2026)",
+          "Groups of 4 to 6 students, online, with teacher Helena",
+          "A2 opens only with a minimum of 4 enrolments"
         ]
       },
       pt: {
-        title: "Cursos sazonais",
+        title: "Cursos de português — edição de Natal",
         lines: [
-          "Preços a anunciar",
-          "Cursos e workshops curtos e temáticos, pensados à volta de tópicos, épocas do ano e objetivos de aprendizagem específicos.",
-          "Estamos atualmente a preparar um workshop de vocabulário de Natal."
+          "A1: 10 aulas de 90 min — 300 € (início a 16 de novembro de 2026)",
+          "A2: 20 aulas de 90 min — 500 € (início a 16 de novembro de 2026)",
+          "Grupos de 4 a 6 alunos, online, com a professora Helena",
+          "O A2 só abre com um mínimo de 4 inscritos"
         ]
       },
       fr: {
-        title: "Cours saisonniers",
+        title: "Cours de portugais — édition de Noël",
         lines: [
-          "Prix à annoncer",
-          "Des cours et ateliers courts et thématiques, conçus autour de sujets, de saisons et d'objectifs d'apprentissage précis.",
-          "Nous préparons actuellement un atelier de vocabulaire de Noël."
+          "A1 : 10 cours de 90 min — 300 € (début le 16 novembre 2026)",
+          "A2 : 20 cours de 90 min — 500 € (début le 16 novembre 2026)",
+          "Groupes de 4 à 6 élèves, en ligne, avec la professeure Helena",
+          "L'A2 n'ouvre qu'avec un minimum de 4 inscrits"
         ]
       }
     },
