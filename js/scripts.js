@@ -71,7 +71,7 @@ window.addEventListener("DOMContentLoaded", () => {
         lines: [
           "A1: 10 lessons of 90 min — 300 € (starts 16 November 2026)",
           "A2: 20 lessons of 90 min — 500 € (starts 16 November 2026)",
-          "Groups of 4 to 6 students, online, with teacher Helena",
+          "Groups of 4 to 6 students, online, led by Helena Gonçalves in partnership with the school",
           "A2 opens only with a minimum of 4 enrolments"
         ]
       },
@@ -80,7 +80,7 @@ window.addEventListener("DOMContentLoaded", () => {
         lines: [
           "A1: 10 aulas de 90 min — 300 € (início a 16 de novembro de 2026)",
           "A2: 20 aulas de 90 min — 500 € (início a 16 de novembro de 2026)",
-          "Grupos de 4 a 6 alunos, online, com a professora Helena",
+          "Grupos de 4 a 6 alunos, online, orientado por Helena Gonçalves, em parceria com a escola",
           "O A2 só abre com um mínimo de 4 inscritos"
         ]
       },
@@ -89,7 +89,7 @@ window.addEventListener("DOMContentLoaded", () => {
         lines: [
           "A1 : 10 cours de 90 min — 300 € (début le 16 novembre 2026)",
           "A2 : 20 cours de 90 min — 500 € (début le 16 novembre 2026)",
-          "Groupes de 4 à 6 élèves, en ligne, avec la professeure Helena",
+          "Groupes de 4 à 6 élèves, en ligne, assurés par Helena Gonçalves, en partenariat avec l'école",
           "L'A2 n'ouvre qu'avec un minimum de 4 inscrits"
         ]
       }
