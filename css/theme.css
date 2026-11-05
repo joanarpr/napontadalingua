@@ -1963,3 +1963,23 @@ button.text-link {
     gap: 12px;
   }
 }
+
+/* Cabeçalho clicável: link para a home da língua ------------------------- */
+/* O link substitui o antigo empilhamento direto dentro de .masthead-inner,
+   por isso repete a mesma disposição (coluna centrada, mesmo espaçamento);
+   o gap é herdado para acompanhar a variação mobile de .masthead-inner. */
+.masthead-inner-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: inherit;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.masthead-inner-link:hover,
+.masthead-inner-link:focus {
+  color: inherit;
+  text-decoration: none;
+}
