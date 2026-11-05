@@ -2028,3 +2028,13 @@ button.text-link {
   background: var(--band);
   border-radius: 4px;
 }
+
+/* Aviso junto ao passo de pagamento */
+.pay-warning {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  border-left: 2px solid var(--star);
+  padding-left: 0.75rem;
+}
