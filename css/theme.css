@@ -2014,3 +2014,17 @@ button.text-link {
 .ml-form-embedContainer .ml-form-embedBody .ml-form-horizontalRow button:hover {
   background-color: var(--accent-hover) !important;
 }
+
+/* Bloco de agradecimento: aparece quando o formulário redirecciona para #thank-you */
+.conv-thanks {
+  display: none;
+}
+.conv-thanks:target {
+  display: block;
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  background: var(--band);
+  border-radius: 4px;
+}
