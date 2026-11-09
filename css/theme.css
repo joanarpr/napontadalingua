@@ -2038,3 +2038,10 @@ button.text-link {
   border-left: 2px solid var(--star);
   padding-left: 0.75rem;
 }
+
+/* Alternativa ao formulário (browsers onde o embed falha) */
+.form-fallback {
+  margin-top: 1rem;
+  font-size: 0.9375rem;
+  color: var(--ink-soft);
+}
