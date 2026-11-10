@@ -2045,3 +2045,9 @@ button.text-link {
   font-size: 0.9375rem;
   color: var(--ink-soft);
 }
+
+/* Próxima sessão (linha temporária, removida após a data) */
+.next-session {
+  margin-top: 0.5rem;
+  color: var(--ink);
+}
