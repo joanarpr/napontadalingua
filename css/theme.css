@@ -2058,3 +2058,35 @@ button.text-link {
   font-size: 0.9375rem;
   color: var(--ink-soft);
 }
+
+/* Botão de voltar ao topo (seta flutuante) */
+.back-to-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  border-radius: 50%;
+  background: #532e79;
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+  opacity: 0;
+  transform: translateY(0.75rem);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 1030;
+}
+.back-to-top.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  background: #40215d;
+}
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top { transition: none; }
+}

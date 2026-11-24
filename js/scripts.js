@@ -318,3 +318,22 @@ window.addEventListener("DOMContentLoaded", () => {
     initPriceModal();
   }
 })();
+
+/* Seta flutuante para voltar ao topo */
+(function () {
+  if (document.getElementById("back-to-top")) return;
+  const b = document.createElement("button");
+  b.id = "back-to-top";
+  b.className = "back-to-top";
+  b.type = "button";
+  b.setAttribute("aria-label", "Back to top");
+  b.innerHTML = "&#8593;";
+  document.body.appendChild(b);
+  const muda = () => {
+    if (window.scrollY > 400) b.classList.add("is-visible");
+    else b.classList.remove("is-visible");
+  };
+  b.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  window.addEventListener("scroll", muda, { passive: true });
+  muda();
+})();
