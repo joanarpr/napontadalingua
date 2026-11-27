@@ -237,25 +237,40 @@
         </h2>
         <p>Fill in the form to reserve your place.</p>
         <div id="mailerlite-form" class="checklist-form-slot" aria-live="polite">
-          <!-- MailerLite Universal -->
-<script>
-  (function (w, d, e, u, f, l, n) {
-    w[f] = w[f] || function () { (w[f].q = w[f].q || []).push(arguments); };
-    l = d.createElement(e); l.async = 1; l.src = u;
-    n = d.getElementsByTagName(e)[0]; n.parentNode.insertBefore(l, n);
-  })(window, document, 'script', 'https://assets.mailerlite.com/js/universal.js', 'ml');
-  ml('account', '2762139');
-</script>
-<!-- End MailerLite Universal -->
-        <p class="form-once">
-          Already signed up? No need to register again. To book a specific session, pay using the
-          reference in that week's email and reply with your proof of payment (a screenshot is enough).
-        </p>
-<p class="form-fallback">
-          Form not working? Email <a href="mailto:aulas.napontadalingua@gmail.com?subject=Conversation%20group%20-%20sign%20me%20up">aulas.napontadalingua@gmail.com</a>
-          and we will sign you up by hand.
-        </p>
-        <div class="ml-embedded" data-form="hQEBvI"></div>
+          <form
+            id="conv-signup"
+            class="conv-form"
+            method="post"
+            action="/api/signup"
+            novalidate
+            data-fallback-email="aulas.napontadalingua@gmail.com"
+            data-fallback-subject="Conversation group - sign me up"
+            data-msg-ok="Thank you. Your place is requested. Check your inbox for the payment details."
+            data-msg-manual="Please email us and we will sign you up by hand: "
+            data-msg-error="Something went wrong. Please email us: "
+            data-msg-bademail="That email does not look right."
+          >
+            <div class="conv-form-row">
+              <label for="conv-email">Your email</label>
+              <input id="conv-email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="conv-form-row">
+              <label for="conv-name">Your name (optional)</label>
+              <input id="conv-name" name="name" type="text" autocomplete="name" />
+            </div>
+            <fieldset class="conv-form-row">
+              <legend>Are you taking lessons with us?</legend>
+              <label><input type="radio" name="student" value="student" /> Yes, I have lessons</label>
+              <label><input type="radio" name="student" value="not_student" checked /> No, not yet</label>
+            </fieldset>
+            <div class="conv-form-hp" aria-hidden="true">
+              <label for="conv-website">website</label>
+              <input id="conv-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+            <button class="btn btn-primary" type="submit">Reserve my place</button>
+            <p class="conv-form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
 <p class="mt-4">
           Check your inbox: we'll send the payment details and the session link.
         </p>
@@ -267,7 +282,6 @@
             aulas.napontadalingua@gmail.com.
           </p>
         </div>
-          </div>
         <p>
           Questions? Write to
           <a href="mailto:aulas.napontadalingua@gmail.com">aulas.napontadalingua@gmail.com</a>.

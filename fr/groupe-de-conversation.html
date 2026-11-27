@@ -241,25 +241,40 @@
         </h2>
         <p>Remplissez le formulaire pour réserver votre place.</p>
         <div id="mailerlite-form" class="checklist-form-slot" aria-live="polite">
-          <!-- MailerLite Universal -->
-<script>
-  (function (w, d, e, u, f, l, n) {
-    w[f] = w[f] || function () { (w[f].q = w[f].q || []).push(arguments); };
-    l = d.createElement(e); l.async = 1; l.src = u;
-    n = d.getElementsByTagName(e)[0]; n.parentNode.insertBefore(l, n);
-  })(window, document, 'script', 'https://assets.mailerlite.com/js/universal.js', 'ml');
-  ml('account', '2762139');
-</script>
-<!-- End MailerLite Universal -->
-        <p class="form-once">
-          Déjà inscrit ? Pas besoin de vous réinscrire. Pour réserver une séance précise, payez avec
-          la référence indiquée dans l'e-mail de la semaine et répondez avec votre justificatif de paiement.
-        </p>
-<p class="form-fallback">
-          Le formulaire ne fonctionne pas ? Écrivez à <a href="mailto:aulas.napontadalingua@gmail.com?subject=Groupe%20de%20conversation%20-%20inscription">aulas.napontadalingua@gmail.com</a>
-          et nous vous inscrirons à la main.
-        </p>
-        <div class="ml-embedded" data-form="hQEBvI"></div>
+          <form
+            id="conv-signup"
+            class="conv-form"
+            method="post"
+            action="/api/signup"
+            novalidate
+            data-fallback-email="aulas.napontadalingua@gmail.com"
+            data-fallback-subject="Groupe de conversation - je veux minscrire"
+            data-msg-ok="Merci. Votre place est demandée. Vérifiez votre boîte de réception pour les informations de paiement."
+            data-msg-manual="Écrivez-nous et nous vous inscrirons à la main : "
+            data-msg-error="Une erreur est survenue. Écrivez-nous : "
+            data-msg-bademail="Cette adresse email ne semble pas valide."
+          >
+            <div class="conv-form-row">
+              <label for="conv-email">Votre email</label>
+              <input id="conv-email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="conv-form-row">
+              <label for="conv-name">Votre nom (facultatif)</label>
+              <input id="conv-name" name="name" type="text" autocomplete="name" />
+            </div>
+            <fieldset class="conv-form-row">
+              <legend>Prenez-vous des cours avec nous ?</legend>
+              <label><input type="radio" name="student" value="student" /> Oui, je prends des cours</label>
+              <label><input type="radio" name="student" value="not_student" checked /> Non, pas encore</label>
+            </fieldset>
+            <div class="conv-form-hp" aria-hidden="true">
+              <label for="conv-website">website</label>
+              <input id="conv-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+            <button class="btn btn-primary" type="submit">Réserver ma place</button>
+            <p class="conv-form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
 <p class="mt-4">
           Vérifiez votre boîte de réception : nous vous enverrons les informations de paiement et le lien de la séance.
         </p>
@@ -269,7 +284,6 @@
             Nous vous avons envoyé un e-mail avec les informations de paiement et le lien de la séance.
             S'il n'arrive pas, vérifiez les spams ou écrivez à aulas.napontadalingua@gmail.com.
           </p>
-        </div>
         </div>
         <p>
           Des questions ? Écrivez à

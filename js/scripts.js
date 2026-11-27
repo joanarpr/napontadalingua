@@ -319,6 +319,66 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 })();
 
+/* Inscrição no grupo de conversação: formulário nativo, envio para /api/signup.
+   Se a função responder que não está configurada, mostramos o email em vez de falhar em silêncio. */
+(function () {
+  const form = document.getElementById("conv-signup");
+  if (!form) return;
+  const estado = form.querySelector(".conv-form-status");
+  const botao = form.querySelector('button[type="submit"]');
+  const email = form.getAttribute("data-fallback-email") || "aulas.napontadalingua@gmail.com";
+  const assunto = form.getAttribute("data-fallback-subject") || "Conversation group - sign me up";
+
+  const dizer = (texto, tipo) => {
+    if (!estado) return;
+    estado.textContent = texto;
+    estado.setAttribute("data-state", tipo || "");
+  };
+
+  form.addEventListener("submit", async (evento) => {
+    evento.preventDefault();
+    if (botao) botao.disabled = true;
+    dizer("", "");
+    const dados = {
+      email: (form.email.value || "").trim(),
+      name: (form.name.value || "").trim(),
+      student: (form.querySelector('input[name="student"]:checked') || {}).value || "not_student",
+      website: (form.website.value || "").trim(),
+    };
+    try {
+      const r = await fetch("/api/signup", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(dados),
+      });
+      const corpo = await r.json().catch(() => ({}));
+      if (r.ok && corpo.ok) {
+        dizer(form.getAttribute("data-msg-ok") || "Thank you. Check your inbox.", "ok");
+        form.reset();
+      } else if (corpo.code === "no-token" || r.status === 503) {
+        dizer(
+          (form.getAttribute("data-msg-manual") || "Please email us and we will sign you up by hand: ") + email,
+          "error"
+        );
+      } else if (corpo.code === "bad-email") {
+        dizer(form.getAttribute("data-msg-bademail") || "That email does not look right.", "error");
+      } else {
+        dizer(
+          (form.getAttribute("data-msg-error") || "Something went wrong. Please email us: ") + email,
+          "error"
+        );
+      }
+    } catch (e) {
+      dizer(
+        (form.getAttribute("data-msg-error") || "Something went wrong. Please email us: ") + email,
+        "error"
+      );
+    } finally {
+      if (botao) botao.disabled = false;
+    }
+  });
+})();
+
 /* Seta flutuante para voltar ao topo */
 (function () {
   if (document.getElementById("back-to-top")) return;
