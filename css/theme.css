@@ -2062,6 +2062,8 @@ button.text-link {
 /* Formulário de inscrição no grupo de conversação (nativo, sem JS de terceiros) */
 .conv-form {
   margin-top: 1.25rem;
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
   gap: 1rem;
   max-width: 34rem;
