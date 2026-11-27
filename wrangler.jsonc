@@ -1,5 +1,10 @@
 {
   "name": "napontadalingua",
+  "main": "src/index.js",
   "compatibility_date": "2026-08-30",
-  "assets": { "directory": "./", "not_found_handling": "404-page" }
+  "assets": {
+    "directory": "./",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page"
+  }
 }
