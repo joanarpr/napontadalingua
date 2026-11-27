@@ -32,7 +32,8 @@ async function inscricao(request, env) {
 
   const email = (dados.email || '').trim().toLowerCase();
   const nome = (dados.name || '').trim().slice(0, 120);
-  const estatuto = dados.student === 'student' ? 'student' : 'not_student';
+  // os valores têm de coincidir com os do formulário antigo, senão os segmentos não os apanham
+  const estatuto = dados.student === 'student' ? "I'm a student" : "I'm not a student";
   const token = (env.MAILERLITE_TOKEN || '').trim();
   const grupo = (env.MAILERLITE_GROUP_ID || GRUPO_POR_DEFEITO).trim();
 
